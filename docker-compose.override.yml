@@ -1,0 +1,197 @@
+services:
+  catalog-init:
+    environment:
+      DB_HOST: "172.31.0.240"
+      MONGO_HOSTS: "mongodb:27017,mongodb2:27017"
+      MONGO_REPLICA_SET: "rs0"
+    networks:
+      - application
+      - database
+  redis:
+    user: redis
+    command: ["sh", "/usr/local/bin/start-redis.sh", "redis"]
+    volumes:
+      - ./redis-sentinel/start-redis.sh:/usr/local/bin/start-redis.sh:ro
+
+  redis-sentinel-1:
+    image: redis:7-alpine
+    user: redis
+    command:
+      - sh
+      - -ec
+      - |
+        test -f /data/sentinel.conf || cp /etc/redis/sentinel-template.conf /data/sentinel.conf
+        exec redis-server /data/sentinel.conf --sentinel
+    volumes:
+      - ./redis-sentinel/sentinel-1.conf:/etc/redis/sentinel-template.conf:ro
+      - redis-sentinel-1-data:/data
+    restart: unless-stopped
+    networks:
+      - database
+
+  redis-sentinel-2:
+    image: redis:7-alpine
+    user: redis
+    command:
+      - sh
+      - -ec
+      - |
+        test -f /data/sentinel.conf || cp /etc/redis/sentinel-template.conf /data/sentinel.conf
+        exec redis-server /data/sentinel.conf --sentinel
+    volumes:
+      - ./redis-sentinel/sentinel-2.conf:/etc/redis/sentinel-template.conf:ro
+      - redis-sentinel-2-data:/data
+    restart: unless-stopped
+    networks:
+      - database
+
+  redis-sentinel-3:
+    image: redis:7-alpine
+    user: redis
+    command:
+      - sh
+      - -ec
+      - |
+        test -f /data/sentinel.conf || cp /etc/redis/sentinel-template.conf /data/sentinel.conf
+        exec redis-server /data/sentinel.conf --sentinel
+    volumes:
+      - ./redis-sentinel/sentinel-3.conf:/etc/redis/sentinel-template.conf:ro
+      - redis-sentinel-3-data:/data
+    restart: unless-stopped
+    networks:
+      - database
+
+  redis-replica:
+    image: redis:7-alpine
+    user: redis
+    command: ["sh", "/usr/local/bin/start-redis.sh", "redis-replica"]
+    volumes:
+      - ./redis-sentinel/start-redis.sh:/usr/local/bin/start-redis.sh:ro
+    restart: unless-stopped
+    networks:
+      - database
+
+  galera1:
+    environment:
+      MARIADB_GALERA_CLUSTER_BOOTSTRAP: "no"
+
+  galera2:
+    environment:
+      MARIADB_GALERA_CLUSTER_BOOTSTRAP: "no"
+      MARIADB_GALERA_CLUSTER_ADDRESS: "gcomm://galera1,galera2,galera3"
+
+  galera-proxy:
+    image: galera-haproxy-advanced:local
+    environment:
+      DB_USER: ${CATALOG_DB_USER:?}
+      DB_PASSWORD: ${CATALOG_DB_PASSWORD:?}
+    volumes:
+      - ./haproxy/galera-proxy-advanced.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    restart: unless-stopped
+    networks:
+      application:
+        ipv4_address: 172.31.0.21
+        interface_name: eth0
+      database:
+        interface_name: eth1
+
+  galera-proxy-backup:
+    image: galera-haproxy-advanced:local
+    environment:
+      DB_USER: ${CATALOG_DB_USER:?}
+      DB_PASSWORD: ${CATALOG_DB_PASSWORD:?}
+    volumes:
+      - ./haproxy/galera-proxy-advanced.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    restart: unless-stopped
+    networks:
+      application:
+        ipv4_address: 172.31.0.22
+        interface_name: eth0
+      database:
+        interface_name: eth1
+
+  galera-keepalived-master:
+    build:
+      context: ./keepalived
+      args:
+        KEEPALIVED_CONFIG: galera-master.conf
+    network_mode: "service:galera-proxy"
+    cap_add:
+      - NET_ADMIN
+      - NET_BROADCAST
+      - NET_RAW
+    restart: unless-stopped
+    depends_on:
+      galera-proxy:
+        condition: service_started
+
+  galera-keepalived-backup:
+    build:
+      context: ./keepalived
+      args:
+        KEEPALIVED_CONFIG: galera-backup.conf
+    network_mode: "service:galera-proxy-backup"
+    cap_add:
+      - NET_ADMIN
+      - NET_BROADCAST
+      - NET_RAW
+    restart: unless-stopped
+    depends_on:
+      galera-proxy-backup:
+        condition: service_started
+
+  app1:
+    environment:
+      REDIS_SENTINEL_NAME: "mymaster"
+      REDIS_SENTINELS: "redis-sentinel-1:26379,redis-sentinel-2:26379,redis-sentinel-3:26379"
+      MONGO_HOSTS: "mongodb:27017,mongodb2:27017"
+      MONGO_REPLICA_SET: "rs0"
+      DB_HOST: "172.31.0.240"
+
+  app2:
+    environment:
+      REDIS_SENTINEL_NAME: "mymaster"
+      REDIS_SENTINELS: "redis-sentinel-1:26379,redis-sentinel-2:26379,redis-sentinel-3:26379"
+      MONGO_HOSTS: "mongodb:27017,mongodb2:27017"
+      MONGO_REPLICA_SET: "rs0"
+      DB_HOST: "172.31.0.240"
+
+  app3:
+    environment:
+      REDIS_SENTINEL_NAME: "mymaster"
+      REDIS_SENTINELS: "redis-sentinel-1:26379,redis-sentinel-2:26379,redis-sentinel-3:26379"
+      MONGO_HOSTS: "mongodb:27017,mongodb2:27017"
+      MONGO_REPLICA_SET: "rs0"
+      DB_HOST: "172.31.0.240"
+
+  mongodb:
+    command: ["mongod", "--replSet", "rs0", "--keyFile", "/etc/mongo-replica.key", "--bind_ip_all"]
+    volumes:
+      - ${HOME}/seguridad-mongodb-995/replica.key:/etc/mongo-replica.key:ro
+
+  mongodb2:
+    image: mongo:8
+    command: ["mongod", "--replSet", "rs0", "--keyFile", "/etc/mongo-replica.key", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.25"]
+    volumes:
+      - mongodb2-data:/data/db
+      - ${HOME}/seguridad-mongodb-995/replica.key:/etc/mongo-replica.key:ro
+    restart: unless-stopped
+    networks:
+      - database
+
+  mongodb-arbiter:
+    image: mongo:8
+    command: ["mongod", "--replSet", "rs0", "--keyFile", "/etc/mongo-replica.key", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.25"]
+    volumes:
+      - mongodb-arbiter-data:/data/db
+      - ${HOME}/seguridad-mongodb-995/replica.key:/etc/mongo-replica.key:ro
+    restart: unless-stopped
+    networks:
+      - database
+
+volumes:
+  redis-sentinel-1-data:
+  redis-sentinel-2-data:
+  redis-sentinel-3-data:
+  mongodb2-data:
+  mongodb-arbiter-data:

@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.56.101 (be patient)
+
+
+Server Software:        nginx/1.31.6
+Server Hostname:        192.168.56.101
+Server Port:            80
+
+Document Path:          /api/health
+Document Length:        15 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.452 seconds
+Complete requests:      300
+Failed requests:        0
+Total transferred:      82800 bytes
+HTML transferred:       4500 bytes
+Requests per second:    663.76 [#/sec] (mean)
+Time per request:       15.066 [ms] (mean)
+Time per request:       1.507 [ms] (mean, across all concurrent requests)
+Transfer rate:          178.90 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.6      0       4
+Processing:     3   14   9.8     11      68
+Waiting:        3   14   9.8     11      66
+Total:          4   15   9.8     11      68
+
+Percentage of the requests served within a certain time (ms)
+  50%     11
+  66%     15
+  75%     18
+  80%     21
+  90%     26
+  95%     33
+  98%     42
+  99%     59
+ 100%     68 (longest request)

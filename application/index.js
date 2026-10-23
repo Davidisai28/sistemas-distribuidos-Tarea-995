@@ -1,7 +1,7 @@
 import { createServer } from "node:http";
 import { MongoClient } from "mongodb";
 import mysql from "mysql2/promise";
-import { createClient } from "redis";
+import { createClient, createSentinel } from "redis";
 
 const required = (name) => {
   const value = process.env[name];
@@ -18,26 +18,72 @@ const pool = mysql.createPool({
   user: required("DB_USER"),
   password: required("DB_PASSWORD"),
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: Number(process.env.DB_POOL_LIMIT || 10),
+  queueLimit: Number(process.env.DB_POOL_QUEUE_LIMIT || 50),
 });
 
+const mongoSeeds = process.env.MONGO_HOSTS ||
+  `${required("MONGO_HOST")}:${Number(process.env.MONGO_PORT || 27017)}`;
+
 const mongo = new MongoClient(
-  `mongodb://${required("MONGO_HOST")}:${Number(process.env.MONGO_PORT || 27017)}/${encodeURIComponent(required("MONGO_DB"))}`,
+  `mongodb://${mongoSeeds}/${encodeURIComponent(required("MONGO_DB"))}`,
   {
     auth: {
       username: required("MONGO_USER"),
       password: required("MONGO_PASSWORD"),
     },
     authSource: "admin",
+    replicaSet: process.env.MONGO_REPLICA_SET || undefined,
   },
 );
-const redis = createClient({
-  socket: {
-    host: required("REDIS_HOST"),
-    port: Number(process.env.REDIS_PORT || 6379),
-  },
-});
+const sentinelNodes = process.env.REDIS_SENTINELS
+  ? process.env.REDIS_SENTINELS.split(",").map((entry) => {
+      const [host, port] = entry.trim().split(":");
+      return { host, port: Number(port || 26379) };
+    })
+  : null;
+
+const redis = sentinelNodes
+  ? createSentinel({
+      name: required("REDIS_SENTINEL_NAME"),
+      sentinelRootNodes: sentinelNodes,
+      nodeClientOptions: {
+        disableOfflineQueue: true,
+      },
+    })
+  : createClient({
+      socket: {
+        host: required("REDIS_HOST"),
+        port: Number(process.env.REDIS_PORT || 6379),
+      },
+    });
 redis.on("error", (error) => console.error("Redis client error:", error));
+
+const optionalCache = async (operation) => {
+  if (redis.isReady === false) {
+    return { ok: false, value: null };
+  }
+
+  let timer;
+
+  try {
+    const value = await Promise.race([
+      operation(),
+      new Promise((_, reject) => {
+        timer = setTimeout(
+          () => reject(new Error("Redis cache timeout")),
+          1200,
+        );
+      }),
+    ]);
+
+    return { ok: true, value };
+  } catch {
+    return { ok: false, value: null };
+  } finally {
+    clearTimeout(timer);
+  }
+};
 
 class HttpError extends Error {
   constructor(statusCode, message, trace) {
@@ -74,7 +120,10 @@ const sendJson = (response, statusCode, payload, trace = []) => {
 };
 
 const start = async () => {
-  await Promise.all([mongo.connect(), redis.connect()]);
+  await mongo.connect();
+  void redis.connect().catch((error) => {
+    console.warn("Redis unavailable at startup:", error.message);
+  });
   const reviews = mongo.db(required("MONGO_DB")).collection("product_reviews");
   const productsCacheKey = "store:products:cheapest";
   const server = createServer((request, response) => {
@@ -88,8 +137,21 @@ const start = async () => {
       const pathname = new URL(request.url, "http://localhost").pathname;
 
       if (request.method === "GET" && pathname === "/health") {
-        await Promise.all([pool.query("SELECT 1"), mongo.db().command({ ping: 1 }), redis.ping()]);
-        sendJson(response, 200, { status: "ok" }, [...trace, "galera1", "mongodb", "redis"]);
+        await Promise.all([
+          pool.query("SELECT 1"),
+          mongo.db().command({ ping: 1 }),
+        ]);
+        const cache = await optionalCache(() => redis.ping());
+        sendJson(
+          response,
+          200,
+          {
+            status: cache.ok ? "ok" : "degraded",
+            redis: cache.ok ? "ok" : "unavailable",
+          },
+          [...trace, "galera (VIP)", "mongodb",
+            cache.ok ? "redis" : "redis (unavailable)"],
+        );
         return;
       }
 
@@ -103,20 +165,33 @@ const start = async () => {
       }
 
       if (request.method === "GET" && pathname === "/products/cheapest") {
-        trace.push("redis");
-        const cached = await redis.get(productsCacheKey);
-        if (cached) {
-          trace.push("cache hit");
-          sendJson(response, 200, JSON.parse(cached), trace);
+        const cache = await optionalCache(
+          () => redis.get(productsCacheKey)
+        );
+
+        if (cache.ok && cache.value) {
+          trace.push("redis (cache hit)");
+          sendJson(response, 200, JSON.parse(cache.value), trace);
           return;
         }
-        trace[trace.length - 1] = "redis (cache miss)";
-        trace.push("galera1");
+
+        trace.push(
+          cache.ok ? "redis (cache miss)" : "redis (unavailable)"
+        );
+        trace.push("galera (VIP)");
+
         const [products] = await pool.execute(
           "SELECT id, sku, name, description, price FROM products ORDER BY price ASC, id ASC LIMIT 10",
         );
-        trace.push("redis (cache write)");
-        await redis.set(productsCacheKey, JSON.stringify(products), { EX: 60 });
+
+        const escritura = await optionalCache(
+          () => redis.set(productsCacheKey, JSON.stringify(products), { EX: 60 })
+        );
+
+        trace.push(
+          escritura.ok ? "redis (cache write)" : "redis (cache skipped)"
+        );
+
         sendJson(response, 200, products, trace);
         return;
       }
@@ -166,7 +241,7 @@ const start = async () => {
         ) {
           throw new HttpError(400, "Provide reviewer, rating (1-5), and comment within the allowed lengths");
         }
-        trace.push("galera1 (product lookup)");
+        trace.push("galera (VIP: product lookup)");
         const [matches] = await pool.execute("SELECT 1 FROM products WHERE sku = ? LIMIT 1", [
           reviewMatch[1],
         ]);
@@ -209,7 +284,7 @@ const start = async () => {
 
   const shutdown = () => {
     server.close(() => {
-      void Promise.all([pool.end(), mongo.close(), redis.quit()]).then(() => process.exit(0));
+      void Promise.all([pool.end(), mongo.close(), redis.close()]).then(() => process.exit(0));
     });
   };
   process.on("SIGINT", shutdown);

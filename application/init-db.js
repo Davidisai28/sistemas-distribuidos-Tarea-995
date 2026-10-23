@@ -33,14 +33,18 @@ const connectToMariaDb = async () => {
 };
 
 const connection = await connectToMariaDb();
+const mongoSeeds = process.env.MONGO_HOSTS ||
+  `${required("MONGO_HOST")}:${Number(process.env.MONGO_PORT || 27017)}`;
+
 const mongo = new MongoClient(
-  `mongodb://${required("MONGO_HOST")}:${Number(process.env.MONGO_PORT || 27017)}/${encodeURIComponent(required("MONGO_DB"))}`,
+  `mongodb://${mongoSeeds}/${encodeURIComponent(required("MONGO_DB"))}`,
   {
     auth: {
       username: required("MONGO_USER"),
       password: required("MONGO_PASSWORD"),
     },
     authSource: "admin",
+    replicaSet: process.env.MONGO_REPLICA_SET || undefined,
   },
 );
 
