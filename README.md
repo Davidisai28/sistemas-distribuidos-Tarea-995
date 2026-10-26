@@ -26,7 +26,7 @@ flowchart TB
 
     subgraph AUX["Monitoreo y herramientas auxiliares"]
         direction TB
-        nagios["Nagios<br/>:8088<br/>15 hosts / 15 servicios"]
+        nagios["Nagios<br/>:8088<br/>27 comprobaciones HTTP/TCP"]
         observ["monitor-995<br/>:7800<br/>Observatorio 995"]
         cataloginit["catalog-init<br/>Inicializador<br/>Exited (0)"]
     end
@@ -283,6 +283,30 @@ El **Observatorio 995** (`monitor-995`, puerto `7800`) muestra las tres capas, l
 <a href="docs/observatorio-995.png"><img src="docs/observatorio-995.png" alt="Interfaz del Observatorio 995 con las capas de presentación, aplicación y datos" width="680"></a>
 
 <sub>Captura de la interfaz del Observatorio. Las conexiones animadas representan trazas lógicas, no paquetes de red capturados. El indicador «Sin conexión» visible en la captura no demuestra telemetría activa en ese instante.</sub>
+
+## Nagios y DockGraph
+
+### Nagios
+
+Utilizamos **Nagios** para comprobar periódicamente la disponibilidad de los componentes principales mediante solicitudes HTTP y conexiones TCP. Se accede a su interfaz desde el puerto `8088` de Ubuntu. Ampliamos la configuración original de 15 a **27 comprobaciones**, incorporando, entre otros, los miembros restantes de MongoDB, la réplica y los Sentinel de Redis, los proxies SQL y las tres VIP.
+
+En la captura del **26 de octubre de 2026**, las **27 comprobaciones aparecen en estado `OK`**. Este resultado acredita que los puntos supervisados respondían en ese momento; no demuestra, por sí solo, el estado de replicación ni la capacidad de failover.
+
+<a href="docs/nagios-27-comprobaciones.png"><img src="docs/nagios-27-comprobaciones.png" alt="Panel de Nagios con 27 comprobaciones HTTP y TCP en estado OK" width="900"></a>
+
+<sub>Vista de Nagios con 27 de 27 comprobaciones en OK. El estado corresponde al instante de la captura.</sub>
+
+**Archivos y evidencias:** [configuración de Nagios](nagios/architecture.cfg) · [detección de caída de `web3`](evidencias/wiki/imagenes/11-nagios-web3-critical.png) · [recuperación de `web3`](evidencias/wiki/imagenes/11-nagios-web3-recuperacion.png).
+
+### DockGraph
+
+Utilizamos **DockGraph** como herramienta auxiliar de visualización de la topología de Docker. Su representación gráfica permite examinar los contenedores y sus conexiones de red, lo que facilita identificar cómo se relacionan los componentes desplegados.
+
+<a href="docs/dockgraph-topologia.png"><img src="docs/dockgraph-topologia.png" alt="Captura de DockGraph con los contenedores y relaciones de red del proyecto" width="900"></a>
+
+<sub>Vista parcial de la topología de contenedores y redes en DockGraph. Las conexiones del gráfico no equivalen a trazas de solicitudes ni a una prueba de alta disponibilidad.</sub>
+
+DockGraph complementa al Observatorio 995 y a Nagios: el primero facilita explorar las relaciones de Docker, el Observatorio presenta la arquitectura lógica y sus estados visualizados, y Nagios realiza comprobaciones periódicas de disponibilidad.
 
 ## Configuración y ejecución
 
