@@ -1,0 +1,9 @@
+UTC=2026-10-25T02:48:26+00:00
+MemAvailable: 6424 MiB
+Contenedor Galera1: true healthy
+API: 200
+Galera sample docker stats:
+NAME                               CPU %     MEM USAGE / LIMIT
+distributed-three-tier-galera1-1   0.50%     153.1MiB / 8.655GiB
+distributed-three-tier-galera2-1   0.52%     123.9MiB / 8.655GiB
+distributed-three-tier-galera3-1   26.62%    172.9MiB / 8.655GiB

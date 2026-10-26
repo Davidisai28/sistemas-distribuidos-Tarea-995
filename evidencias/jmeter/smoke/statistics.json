@@ -1,0 +1,34 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 100,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 8.520000000000005,
+    "medianResTime" : 8.0,
+    "minResTime" : 6.0,
+    "maxResTime" : 42.0,
+    "pct1ResTime" : 10.0,
+    "pct2ResTime" : 11.0,
+    "pct3ResTime" : 41.73999999999987,
+    "throughput" : 24.521824423737126,
+    "receivedKBytesPerSec" : 7.519387567435016,
+    "sentKBytesPerSec" : 3.041280958803335
+  },
+  "GET - Salud API" : {
+    "transaction" : "GET - Salud API",
+    "sampleCount" : 100,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 8.520000000000005,
+    "medianResTime" : 8.0,
+    "minResTime" : 6.0,
+    "maxResTime" : 42.0,
+    "pct1ResTime" : 10.0,
+    "pct2ResTime" : 11.0,
+    "pct3ResTime" : 41.73999999999987,
+    "throughput" : 24.521824423737126,
+    "receivedKBytesPerSec" : 7.519387567435016,
+    "sentKBytesPerSec" : 3.041280958803335
+  }
+}

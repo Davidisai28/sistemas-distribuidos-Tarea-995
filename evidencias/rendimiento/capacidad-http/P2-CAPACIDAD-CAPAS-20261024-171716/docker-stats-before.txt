@@ -1,0 +1,5 @@
+distributed-three-tier-presentation-entry-1 | 0.69% | 44.07MiB / 8.655GiB
+distributed-three-tier-web1-1 | 0.26% | 6.508MiB / 8.655GiB
+distributed-three-tier-app1-1 | 3.19% | 73.82MiB / 8.655GiB
+distributed-three-tier-galera1-1 | 3.82% | 140.3MiB / 8.655GiB
+distributed-three-tier-redis-1 | 3.74% | 4.691MiB / 8.655GiB

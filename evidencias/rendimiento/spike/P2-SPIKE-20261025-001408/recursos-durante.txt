@@ -1,0 +1,70 @@
+--- 2026-10-25T00:14:08Z fase=BASE5 ---
+Mem:            8862        2599        2491           6        4055        6262
+distributed-three-tier-presentation-entry-1 37.70% 45.08MiB / 8.655GiB
+distributed-three-tier-web1-1 12.32% 6.562MiB / 8.655GiB
+distributed-three-tier-app1-1 21.34% 74.18MiB / 8.655GiB
+distributed-three-tier-galera1-1 0.19% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 7.05% 4.773MiB / 8.655GiB
+--- 2026-10-25T00:14:12Z fase=BASE5 ---
+Mem:            8862        2413        2676           6        4056        6448
+distributed-three-tier-presentation-entry-1 34.09% 45.11MiB / 8.655GiB
+distributed-three-tier-web1-1 10.16% 6.688MiB / 8.655GiB
+distributed-three-tier-app1-1 19.78% 74.18MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.60% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 6.40% 4.781MiB / 8.655GiB
+--- 2026-10-25T00:14:16Z fase=BASE5 ---
+Mem:            8862        2393        2696           6        4057        6469
+distributed-three-tier-presentation-entry-1 30.44% 45.11MiB / 8.655GiB
+distributed-three-tier-web1-1 9.77% 6.805MiB / 8.655GiB
+distributed-three-tier-app1-1 16.80% 74.19MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.92% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 5.54% 4.781MiB / 8.655GiB
+--- 2026-10-25T00:14:20Z fase=BASE5 ---
+Mem:            8862        2415        2672           6        4058        6446
+--- 2026-10-25T00:14:20Z fase=SPIKE300 ---
+Mem:            8862        2411        2676           6        4059        6451
+distributed-three-tier-presentation-entry-1 67.98% 47.22MiB / 8.655GiB
+distributed-three-tier-web1-1 27.21% 7.211MiB / 8.655GiB
+distributed-three-tier-app1-1 43.79% 74.57MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.96% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 19.58% 4.852MiB / 8.655GiB
+distributed-three-tier-presentation-entry-1 56.04% 46.9MiB / 8.655GiB
+distributed-three-tier-web1-1 29.23% 7.816MiB / 8.655GiB
+distributed-three-tier-app1-1 38.44% 74.4MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.22% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 9.48% 4.844MiB / 8.655GiB
+--- 2026-10-25T00:14:25Z fase=SPIKE300 ---
+Mem:            8862        2401        2681           6        4065        6460
+distributed-three-tier-presentation-entry-1 43.25% 46.71MiB / 8.655GiB
+distributed-three-tier-web1-1 27.46% 8.867MiB / 8.655GiB
+distributed-three-tier-app1-1 29.84% 74.62MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.00% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 9.13% 4.887MiB / 8.655GiB
+--- 2026-10-25T00:14:32Z fase=SPIKE300 ---
+Mem:            8862        2676        2403           6        4068        6186
+--- 2026-10-25T00:14:33Z fase=RECOVERY5 ---
+Mem:            8862        2710        2369           6        4069        6152
+distributed-three-tier-presentation-entry-1 33.10% 45.28MiB / 8.655GiB
+distributed-three-tier-web1-1 9.98% 7.875MiB / 8.655GiB
+distributed-three-tier-app1-1 18.37% 76.88MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.43% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 5.63% 4.91MiB / 8.655GiB
+distributed-three-tier-presentation-entry-1 33.10% 45.28MiB / 8.655GiB
+distributed-three-tier-web1-1 22.06% 7.852MiB / 8.655GiB
+distributed-three-tier-app1-1 18.37% 76.88MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.43% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 5.63% 4.91MiB / 8.655GiB
+--- 2026-10-25T00:14:36Z fase=RECOVERY5 ---
+Mem:            8862        2508        2570           6        4069        6353
+distributed-three-tier-presentation-entry-1 28.37% 45.29MiB / 8.655GiB
+distributed-three-tier-web1-1 9.10% 7.996MiB / 8.655GiB
+distributed-three-tier-app1-1 16.55% 76.88MiB / 8.655GiB
+distributed-three-tier-galera1-1 0.36% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 5.26% 4.906MiB / 8.655GiB
+--- 2026-10-25T00:14:41Z fase=RECOVERY5 ---
+Mem:            8862        2469        2609           6        4069        6393
+distributed-three-tier-presentation-entry-1 36.05% 45.29MiB / 8.655GiB
+distributed-three-tier-web1-1 10.91% 8.129MiB / 8.655GiB
+distributed-three-tier-app1-1 18.82% 77.33MiB / 8.655GiB
+distributed-three-tier-galera1-1 1.20% 140.7MiB / 8.655GiB
+distributed-three-tier-redis-1 6.21% 4.895MiB / 8.655GiB

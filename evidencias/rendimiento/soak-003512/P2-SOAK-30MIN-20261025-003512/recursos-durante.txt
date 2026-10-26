@@ -1,0 +1,392 @@
+===== 2026-10-25T00:35:13Z MemAvailable=6480MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.67%|45.22MiB / 8.655GiB
+distributed-three-tier-web1-1|0.47%|6.523MiB / 8.655GiB
+distributed-three-tier-app1-1|1.09%|77.51MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.95%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.48%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.09%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:35:46Z MemAvailable=6418MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.78%|45.31MiB / 8.655GiB
+distributed-three-tier-web1-1|0.77%|6.551MiB / 8.655GiB
+distributed-three-tier-app1-1|1.52%|77.5MiB / 8.655GiB
+distributed-three-tier-galera1-1|3.40%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|48.57%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.79%|5.008MiB / 8.655GiB
+===== 2026-10-25T00:36:20Z MemAvailable=6443MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.34%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.34%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.36%|77.51MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.18%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|9.61%|155.3MiB / 8.655GiB
+distributed-three-tier-redis-1|1.13%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:36:53Z MemAvailable=6468MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.59%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.35%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.94%|77.54MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.75%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.96%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.26%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:37:25Z MemAvailable=6475MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.21%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.29%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.44%|77.56MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.50%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|29.04%|246.1MiB / 8.655GiB
+distributed-three-tier-redis-1|1.32%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:37:57Z MemAvailable=6473MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.39%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.58%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.76%|77.56MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.58%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.22%|153.6MiB / 8.655GiB
+distributed-three-tier-redis-1|1.17%|4.766MiB / 8.655GiB
+===== 2026-10-25T00:38:29Z MemAvailable=6479MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|0.79%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.21%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.32%|77.55MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.32%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|5.04%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|8.02%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:39:01Z MemAvailable=6477MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.32%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.25%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.04%|77.57MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.35%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|12.51%|153.9MiB / 8.655GiB
+distributed-three-tier-redis-1|1.18%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:39:34Z MemAvailable=6489MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.86%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.34%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.11%|77.33MiB / 8.655GiB
+distributed-three-tier-galera1-1|12.85%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|42.79%|299MiB / 8.655GiB
+distributed-three-tier-redis-1|1.22%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:40:08Z MemAvailable=6499MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.00%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.26%|6.559MiB / 8.655GiB
+distributed-three-tier-app1-1|1.93%|77.34MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.24%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|4.14%|153.9MiB / 8.655GiB
+distributed-three-tier-redis-1|1.42%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:40:40Z MemAvailable=6319MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.07%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.41%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.88%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.65%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.88%|153.9MiB / 8.655GiB
+distributed-three-tier-redis-1|6.49%|4.777MiB / 8.655GiB
+===== 2026-10-25T00:41:13Z MemAvailable=6318MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|0.83%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.27%|6.559MiB / 8.655GiB
+distributed-three-tier-app1-1|1.08%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.41%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|3.90%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.19%|4.766MiB / 8.655GiB
+===== 2026-10-25T00:41:45Z MemAvailable=6473MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.75%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.57%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.32%|77.36MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.39%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|55.11%|297MiB / 8.655GiB
+distributed-three-tier-redis-1|1.30%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:42:17Z MemAvailable=6309MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.21%|45.35MiB / 8.655GiB
+distributed-three-tier-web1-1|0.29%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.61%|77.32MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.10%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.21%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.06%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:42:49Z MemAvailable=6468MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.07%|45.35MiB / 8.655GiB
+distributed-three-tier-web1-1|0.32%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.05%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|11.26%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|86.74%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.12%|5.008MiB / 8.655GiB
+===== 2026-10-25T00:43:22Z MemAvailable=6482MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.66%|45.35MiB / 8.655GiB
+distributed-three-tier-web1-1|0.38%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.21%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.29%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|47.23%|300.7MiB / 8.655GiB
+distributed-three-tier-redis-1|5.23%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:43:55Z MemAvailable=6480MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.72%|45.35MiB / 8.655GiB
+distributed-three-tier-web1-1|0.30%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.90%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.29%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.03%|154MiB / 8.655GiB
+distributed-three-tier-redis-1|1.24%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:44:27Z MemAvailable=6440MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.42%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.27%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.39%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.25%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.88%|154.1MiB / 8.655GiB
+distributed-three-tier-redis-1|1.15%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:45:01Z MemAvailable=6476MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.95%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.38%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.45%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.57%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.20%|153.9MiB / 8.655GiB
+distributed-three-tier-redis-1|1.26%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:45:34Z MemAvailable=6443MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.55%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.41%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.06%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.48%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.87%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|6.69%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:46:07Z MemAvailable=6270MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.44%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.60%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.13%|77.44MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.35%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.68%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.11%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:46:39Z MemAvailable=6264MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.39%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.19%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.63%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.49%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|37.43%|298.3MiB / 8.655GiB
+distributed-three-tier-redis-1|1.09%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:47:12Z MemAvailable=6446MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.55%|45.35MiB / 8.655GiB
+distributed-three-tier-web1-1|0.55%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.61%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.32%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|54.29%|299.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.13%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:47:45Z MemAvailable=6482MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.76%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.51%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.73%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|17.56%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|4.19%|153.6MiB / 8.655GiB
+distributed-three-tier-redis-1|14.26%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:48:18Z MemAvailable=6449MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.42%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.43%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.50%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.28%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|72.96%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.36%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:48:50Z MemAvailable=6444MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.27%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.51%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.58%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.10%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|97.42%|306.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.32%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:49:23Z MemAvailable=6506MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.71%|45.36MiB / 8.655GiB
+distributed-three-tier-web1-1|0.38%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.96%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.42%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.81%|154MiB / 8.655GiB
+distributed-three-tier-redis-1|1.03%|5.008MiB / 8.655GiB
+===== 2026-10-25T00:49:55Z MemAvailable=6470MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.55%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.37%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.15%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.92%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.92%|154MiB / 8.655GiB
+distributed-three-tier-redis-1|1.32%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:50:28Z MemAvailable=6479MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.79%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.54%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.15%|77.44MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.35%|140.8MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.68%|154MiB / 8.655GiB
+distributed-three-tier-redis-1|7.18%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:51:00Z MemAvailable=6456MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.48%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.29%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.30%|77.44MiB / 8.655GiB
+distributed-three-tier-galera1-1|16.13%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|3.56%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.12%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:51:33Z MemAvailable=6478MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.27%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.55%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.73%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.29%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.67%|153.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.82%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:52:05Z MemAvailable=6478MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.01%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.88%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.62%|77.44MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.81%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.62%|153.9MiB / 8.655GiB
+distributed-three-tier-redis-1|1.44%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:52:38Z MemAvailable=6418MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.31%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.23%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.74%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.00%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.96%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.14%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:53:10Z MemAvailable=6296MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.49%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.36%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.72%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.12%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|5.78%|153.8MiB / 8.655GiB
+distributed-three-tier-redis-1|7.40%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:53:42Z MemAvailable=6311MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.09%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.55%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|2.38%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.88%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|88.73%|154.1MiB / 8.655GiB
+distributed-three-tier-redis-1|1.07%|4.75MiB / 8.655GiB
+===== 2026-10-25T00:54:16Z MemAvailable=6448MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.42%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.25%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.29%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|3.43%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|93.32%|301.6MiB / 8.655GiB
+distributed-three-tier-redis-1|1.58%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:54:49Z MemAvailable=6460MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.88%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.77%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|2.86%|77.42MiB / 8.655GiB
+distributed-three-tier-galera1-1|2.45%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|4.97%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.56%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:55:23Z MemAvailable=6463MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.25%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.50%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|2.05%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.60%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.95%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.90%|4.762MiB / 8.655GiB
+===== 2026-10-25T00:55:56Z MemAvailable=6467MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.32%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.30%|6.559MiB / 8.655GiB
+distributed-three-tier-app1-1|1.50%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.35%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.94%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.25%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:56:29Z MemAvailable=6402MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.32%|45.36MiB / 8.655GiB
+distributed-three-tier-web1-1|0.50%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.28%|77.43MiB / 8.655GiB
+distributed-three-tier-galera1-1|11.70%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|5.88%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|0.97%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:57:01Z MemAvailable=6479MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.56%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.37%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.25%|77.3MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.30%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|25.30%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.12%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:57:34Z MemAvailable=6454MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|0.86%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.29%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|0.93%|77.31MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.30%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|108.28%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|1.20%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:58:06Z MemAvailable=6477MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.50%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.43%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.47%|77.33MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.16%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|3.03%|154.2MiB / 8.655GiB
+distributed-three-tier-redis-1|1.21%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:58:38Z MemAvailable=6309MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.36%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.40%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.17%|77.34MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.26%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.30%|154.4MiB / 8.655GiB
+distributed-three-tier-redis-1|0.97%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:59:10Z MemAvailable=6450MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.70%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.47%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.52%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.24%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.00%|154.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.08%|4.758MiB / 8.655GiB
+===== 2026-10-25T00:59:43Z MemAvailable=6300MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.11%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.38%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.37%|77.33MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.13%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.57%|154.7MiB / 8.655GiB
+distributed-three-tier-redis-1|1.09%|4.758MiB / 8.655GiB
+===== 2026-10-25T01:00:15Z MemAvailable=6483MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.39%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.40%|6.562MiB / 8.655GiB
+distributed-three-tier-app1-1|1.12%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.86%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|34.37%|297.3MiB / 8.655GiB
+distributed-three-tier-redis-1|7.80%|4.777MiB / 8.655GiB
+===== 2026-10-25T01:00:48Z MemAvailable=6392MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|0.98%|45.34MiB / 8.655GiB
+distributed-three-tier-web1-1|0.36%|6.566MiB / 8.655GiB
+distributed-three-tier-app1-1|1.53%|77.36MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.30%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.69%|154.6MiB / 8.655GiB
+distributed-three-tier-redis-1|1.24%|4.777MiB / 8.655GiB
+===== 2026-10-25T01:01:20Z MemAvailable=6440MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.01%|45.37MiB / 8.655GiB
+distributed-three-tier-web1-1|0.68%|6.578MiB / 8.655GiB
+distributed-three-tier-app1-1|1.95%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.68%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|105.81%|154.6MiB / 8.655GiB
+distributed-three-tier-redis-1|1.15%|4.762MiB / 8.655GiB
+===== 2026-10-25T01:01:52Z MemAvailable=6444MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|1.89%|45.41MiB / 8.655GiB
+distributed-three-tier-web1-1|0.52%|6.59MiB / 8.655GiB
+distributed-three-tier-app1-1|1.27%|77.36MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.26%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|109.50%|154.7MiB / 8.655GiB
+distributed-three-tier-redis-1|0.87%|4.754MiB / 8.655GiB
+===== 2026-10-25T01:02:25Z MemAvailable=6423MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|3.54%|45.71MiB / 8.655GiB
+distributed-three-tier-web1-1|1.10%|6.602MiB / 8.655GiB
+distributed-three-tier-app1-1|2.28%|77.36MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.77%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|3.17%|154.6MiB / 8.655GiB
+distributed-three-tier-redis-1|1.77%|4.762MiB / 8.655GiB
+===== 2026-10-25T01:02:57Z MemAvailable=6435MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|3.13%|45.49MiB / 8.655GiB
+distributed-three-tier-web1-1|0.85%|6.617MiB / 8.655GiB
+distributed-three-tier-app1-1|3.19%|77.35MiB / 8.655GiB
+distributed-three-tier-galera1-1|16.28%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.22%|154.6MiB / 8.655GiB
+distributed-three-tier-redis-1|9.56%|4.762MiB / 8.655GiB
+===== 2026-10-25T01:03:30Z MemAvailable=6452MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.82%|45.5MiB / 8.655GiB
+distributed-three-tier-web1-1|1.07%|6.617MiB / 8.655GiB
+distributed-three-tier-app1-1|2.47%|77.38MiB / 8.655GiB
+distributed-three-tier-galera1-1|0.30%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|4.36%|154.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.49%|4.762MiB / 8.655GiB
+===== 2026-10-25T01:04:02Z MemAvailable=6428MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|3.15%|45.5MiB / 8.655GiB
+distributed-three-tier-web1-1|1.00%|6.617MiB / 8.655GiB
+distributed-three-tier-app1-1|2.32%|77.38MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.18%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|2.81%|154.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.56%|4.754MiB / 8.655GiB
+===== 2026-10-25T01:04:35Z MemAvailable=6395MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|3.13%|45.5MiB / 8.655GiB
+distributed-three-tier-web1-1|0.76%|6.613MiB / 8.655GiB
+distributed-three-tier-app1-1|1.73%|77.33MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.17%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|1.96%|154.8MiB / 8.655GiB
+distributed-three-tier-redis-1|1.44%|4.758MiB / 8.655GiB
+===== 2026-10-25T01:05:08Z MemAvailable=6276MiB Active=31 HealthHTTP=200 =====
+distributed-three-tier-presentation-entry-1|2.47%|45.48MiB / 8.655GiB
+distributed-three-tier-web1-1|0.59%|6.613MiB / 8.655GiB
+distributed-three-tier-app1-1|1.56%|77.32MiB / 8.655GiB
+distributed-three-tier-galera1-1|1.57%|140.7MiB / 8.655GiB
+distributed-three-tier-mongodb-1|6.45%|154.8MiB / 8.655GiB
+distributed-three-tier-redis-1|3.36%|7.516MiB / 8.655GiB

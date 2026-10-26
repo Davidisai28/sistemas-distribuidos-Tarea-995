@@ -1,0 +1,15 @@
+Resumen fiel — salida de consola Nagios pegada en conversación (no es un log original extraído)
+
+===== NAGIOS =====
+Estado=running Salud=sin-healthcheck
+80/tcp -> 0.0.0.0:8088
+80/tcp -> [::]:8088
+===== CONFIGURACION DE MONITOREO =====
+Fichero /opt/nagios/etc/objects/localhost.cfg
+Host max_check_attempts=5 en bloques de presentation-lb, web, app, galera.
+Hosts y servicios: presentation-lb-master/backup HTTP listener 80; web1/2/3 Website HTTP 80; application-lb-master/backup Application HTTP 8080; app1/2/3 Application HTTP 8080; galera1/2/3 MariaDB TCP 3306; mongodb MongoDB TCP 27017; redis Redis TCP 6379.
+===== REGISTROS RECIENTES =====
+Nagios CURRENT HOST STATE: galera1, galera2, galera3, mongodb, redis, web1/2/3 y LBs = UP HARD 1.
+Nagios CURRENT SERVICE STATE: app1/2/3, application-lb, galera1/2/3, mongodb, presentation-lb, redis, web1/2/3 = OK HARD 1.
+Nagios Auto-save of retention data completed successfully (repetido).
+Warning: A system time change of 28196 seconds (0d 7h 49m 56s forwards in time) has been detected. Compensating... (dos veces).

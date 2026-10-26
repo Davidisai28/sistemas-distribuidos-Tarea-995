@@ -1,0 +1,10 @@
+PRUEBA=P2-CAPACIDAD-SQL-01
+INICIO_UTC=2026-10-25T02:47:58+00:00
+CLIENTE=MariaDB mysqlslap desde el contenedor Galera1
+TIPO=SELECT COUNT(*) lectura; conexion TCP localhost:3306
+CONCURRENCIAS=1 5 10 25 50
+NOTA=no equivale a capacidad completa de la API; tampoco representa percentiles por consulta
+Contenedor: distributed-three-tier-galera1-1
+Estado contenedor: true healthy
+MemAvailable inicio: 6379 MiB
+Health HTTP: 200

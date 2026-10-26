@@ -1,0 +1,56 @@
+BASE_EXISTENTE=store TABLA_EXISTENTE=products
+CONSULTA_SOLO_LECTURA=SELECT COUNT(*) FROM `store`.`products`
+VALOR_PREVIO:
+12
+===== NIVEL_C=1 INICIO=2026-10-25T02:48:00+00:00 =====
+/opt/bitnami/mariadb/bin/mysqlslap: Deprecated program name. It will be removed in a future release, use '/opt/bitnami/mariadb/bin/mariadb-slap' instead
+Benchmark
+	Average number of seconds to run all queries: 0.508 seconds
+	Minimum number of seconds to run all queries: 0.363 seconds
+	Maximum number of seconds to run all queries: 0.653 seconds
+	Number of clients running queries: 1
+	Average number of queries per client: 500
+
+===== NIVEL_C=1 FIN=2026-10-25T02:48:02+00:00 =====
+===== NIVEL_C=5 INICIO=2026-10-25T02:48:02+00:00 =====
+/opt/bitnami/mariadb/bin/mysqlslap: Deprecated program name. It will be removed in a future release, use '/opt/bitnami/mariadb/bin/mariadb-slap' instead
+Benchmark
+	Average number of seconds to run all queries: 0.685 seconds
+	Minimum number of seconds to run all queries: 0.551 seconds
+	Maximum number of seconds to run all queries: 0.819 seconds
+	Number of clients running queries: 5
+	Average number of queries per client: 100
+
+===== NIVEL_C=5 FIN=2026-10-25T02:48:03+00:00 =====
+===== NIVEL_C=10 INICIO=2026-10-25T02:48:03+00:00 =====
+/opt/bitnami/mariadb/bin/mysqlslap: Deprecated program name. It will be removed in a future release, use '/opt/bitnami/mariadb/bin/mariadb-slap' instead
+Benchmark
+	Average number of seconds to run all queries: 1.376 seconds
+	Minimum number of seconds to run all queries: 1.344 seconds
+	Maximum number of seconds to run all queries: 1.408 seconds
+	Number of clients running queries: 10
+	Average number of queries per client: 50
+
+===== NIVEL_C=10 FIN=2026-10-25T02:48:06+00:00 =====
+===== NIVEL_C=25 INICIO=2026-10-25T02:48:06+00:00 =====
+/opt/bitnami/mariadb/bin/mysqlslap: Deprecated program name. It will be removed in a future release, use '/opt/bitnami/mariadb/bin/mariadb-slap' instead
+Benchmark
+	Average number of seconds to run all queries: 3.422 seconds
+	Minimum number of seconds to run all queries: 3.335 seconds
+	Maximum number of seconds to run all queries: 3.510 seconds
+	Number of clients running queries: 25
+	Average number of queries per client: 20
+
+===== NIVEL_C=25 FIN=2026-10-25T02:48:13+00:00 =====
+===== NIVEL_C=50 INICIO=2026-10-25T02:48:13+00:00 =====
+/opt/bitnami/mariadb/bin/mysqlslap: Deprecated program name. It will be removed in a future release, use '/opt/bitnami/mariadb/bin/mariadb-slap' instead
+Benchmark
+	Average number of seconds to run all queries: 5.943 seconds
+	Minimum number of seconds to run all queries: 5.871 seconds
+	Maximum number of seconds to run all queries: 6.016 seconds
+	Number of clients running queries: 50
+	Average number of queries per client: 10
+
+===== NIVEL_C=50 FIN=2026-10-25T02:48:26+00:00 =====
+VALOR_POSTERIOR:
+12

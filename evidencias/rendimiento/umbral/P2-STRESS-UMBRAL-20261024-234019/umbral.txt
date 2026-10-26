@@ -1,0 +1,1 @@
+UMBRAL_OBSERVADO_EN_c=300: revisar errores, p95, RAM y salud.

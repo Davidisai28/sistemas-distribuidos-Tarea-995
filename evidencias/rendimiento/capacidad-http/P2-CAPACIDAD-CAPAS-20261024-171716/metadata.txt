@@ -1,0 +1,4 @@
+2026-10-24T17:17:17+00:00
+PUBLIC=http://127.0.0.1/api/products/cheapest
+WEB=http://172.31.0.5:80/api/products/cheapest
+APP=http://172.31.0.4:8080/products/cheapest

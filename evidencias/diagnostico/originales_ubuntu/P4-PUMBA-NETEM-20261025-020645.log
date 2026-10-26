@@ -1,0 +1,6 @@
+===== INICIO 2026-10-25T02:06:45+00:00 =====
+time="2026-10-25T02:07:04Z" level=info msg="running netem on container" command="[delay 800ms 10ms 20.00]" dports="[]" dryrun=false id=8a0f1c3d41487329b342140f31c6481ed43128f684f234a4120da28580c6880b ips="[]" name=/distributed-three-tier-web3-1 sports="[]"
+time="2026-10-25T02:07:20Z" level=info msg="stopping netem on container" dports="[]" dryrun=false id=8a0f1c3d41487329b342140f31c6481ed43128f684f234a4120da28580c6880b ips="[]" name=/distributed-three-tier-web3-1 sports="[]"
+===== FIN 2026-10-25T02:07:27+00:00 =====
+true false
+{"status":"ok","redis":"ok"}

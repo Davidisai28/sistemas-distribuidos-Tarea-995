@@ -1,0 +1,34 @@
+{
+  "GET - Catalogo" : {
+    "transaction" : "GET - Catalogo",
+    "sampleCount" : 1934,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 19.139089968976243,
+    "medianResTime" : 17.0,
+    "minResTime" : 6.0,
+    "maxResTime" : 121.0,
+    "pct1ResTime" : 30.0,
+    "pct2ResTime" : 36.0,
+    "pct3ResTime" : 61.65000000000009,
+    "throughput" : 32.62097930406328,
+    "receivedKBytesPerSec" : 45.71462889208427,
+    "sentKBytesPerSec" : 4.396186664024154
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1934,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 19.139089968976243,
+    "medianResTime" : 17.0,
+    "minResTime" : 6.0,
+    "maxResTime" : 121.0,
+    "pct1ResTime" : 30.0,
+    "pct2ResTime" : 36.0,
+    "pct3ResTime" : 61.65000000000009,
+    "throughput" : 32.62097930406328,
+    "receivedKBytesPerSec" : 45.71462889208427,
+    "sentKBytesPerSec" : 4.396186664024154
+  }
+}

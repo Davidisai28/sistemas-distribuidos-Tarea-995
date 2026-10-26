@@ -1,0 +1,62 @@
+2026-10-25T00:35:13Z SOAK_INICIO duracion_seg=1800 clientes=5 URL=http://127.0.0.1/api/products/cheapest memoria_libre_inicio_mib=6482
+2026-10-25T00:35:13Z Se pretende ~5 req/s sostenidas mediante 5 trabajadores, cada uno espera un segundo despues de cada GET.
+2026-10-25T00:35:15Z CHECK memoria_mib=6480 contenedores=31 health_http=200
+2026-10-25T00:35:49Z CHECK memoria_mib=6418 contenedores=31 health_http=200
+2026-10-25T00:36:22Z CHECK memoria_mib=6443 contenedores=31 health_http=200
+2026-10-25T00:36:55Z CHECK memoria_mib=6468 contenedores=31 health_http=200
+2026-10-25T00:37:27Z CHECK memoria_mib=6475 contenedores=31 health_http=200
+2026-10-25T00:37:58Z CHECK memoria_mib=6473 contenedores=31 health_http=200
+2026-10-25T00:38:31Z CHECK memoria_mib=6479 contenedores=31 health_http=200
+2026-10-25T00:39:03Z CHECK memoria_mib=6477 contenedores=31 health_http=200
+2026-10-25T00:39:37Z CHECK memoria_mib=6489 contenedores=31 health_http=200
+2026-10-25T00:40:10Z CHECK memoria_mib=6499 contenedores=31 health_http=200
+2026-10-25T00:40:42Z CHECK memoria_mib=6319 contenedores=31 health_http=200
+2026-10-25T00:41:15Z CHECK memoria_mib=6318 contenedores=31 health_http=200
+2026-10-25T00:41:47Z CHECK memoria_mib=6473 contenedores=31 health_http=200
+2026-10-25T00:42:19Z CHECK memoria_mib=6309 contenedores=31 health_http=200
+2026-10-25T00:42:51Z CHECK memoria_mib=6468 contenedores=31 health_http=200
+2026-10-25T00:43:25Z CHECK memoria_mib=6482 contenedores=31 health_http=200
+2026-10-25T00:43:57Z CHECK memoria_mib=6480 contenedores=31 health_http=200
+2026-10-25T00:44:30Z CHECK memoria_mib=6440 contenedores=31 health_http=200
+2026-10-25T00:45:03Z CHECK memoria_mib=6476 contenedores=31 health_http=200
+2026-10-25T00:45:36Z CHECK memoria_mib=6443 contenedores=31 health_http=200
+2026-10-25T00:46:09Z CHECK memoria_mib=6270 contenedores=31 health_http=200
+2026-10-25T00:46:42Z CHECK memoria_mib=6264 contenedores=31 health_http=200
+2026-10-25T00:47:15Z CHECK memoria_mib=6446 contenedores=31 health_http=200
+2026-10-25T00:47:48Z CHECK memoria_mib=6482 contenedores=31 health_http=200
+2026-10-25T00:48:20Z CHECK memoria_mib=6449 contenedores=31 health_http=200
+2026-10-25T00:48:53Z CHECK memoria_mib=6444 contenedores=31 health_http=200
+2026-10-25T00:49:25Z CHECK memoria_mib=6506 contenedores=31 health_http=200
+2026-10-25T00:49:57Z CHECK memoria_mib=6470 contenedores=31 health_http=200
+2026-10-25T00:50:30Z CHECK memoria_mib=6479 contenedores=31 health_http=200
+2026-10-25T00:51:03Z CHECK memoria_mib=6456 contenedores=31 health_http=200
+2026-10-25T00:51:35Z CHECK memoria_mib=6478 contenedores=31 health_http=200
+2026-10-25T00:52:07Z CHECK memoria_mib=6478 contenedores=31 health_http=200
+2026-10-25T00:52:39Z CHECK memoria_mib=6418 contenedores=31 health_http=200
+2026-10-25T00:53:12Z CHECK memoria_mib=6296 contenedores=31 health_http=200
+2026-10-25T00:53:45Z CHECK memoria_mib=6311 contenedores=31 health_http=200
+2026-10-25T00:54:18Z CHECK memoria_mib=6448 contenedores=31 health_http=200
+2026-10-25T00:54:52Z CHECK memoria_mib=6460 contenedores=31 health_http=200
+2026-10-25T00:55:25Z CHECK memoria_mib=6463 contenedores=31 health_http=200
+2026-10-25T00:55:58Z CHECK memoria_mib=6467 contenedores=31 health_http=200
+2026-10-25T00:56:31Z CHECK memoria_mib=6402 contenedores=31 health_http=200
+2026-10-25T00:57:03Z CHECK memoria_mib=6479 contenedores=31 health_http=200
+2026-10-25T00:57:36Z CHECK memoria_mib=6454 contenedores=31 health_http=200
+2026-10-25T00:58:08Z CHECK memoria_mib=6477 contenedores=31 health_http=200
+2026-10-25T00:58:40Z CHECK memoria_mib=6309 contenedores=31 health_http=200
+2026-10-25T00:59:13Z CHECK memoria_mib=6450 contenedores=31 health_http=200
+2026-10-25T00:59:45Z CHECK memoria_mib=6300 contenedores=31 health_http=200
+2026-10-25T01:00:17Z CHECK memoria_mib=6483 contenedores=31 health_http=200
+2026-10-25T01:00:49Z CHECK memoria_mib=6392 contenedores=31 health_http=200
+2026-10-25T01:01:21Z CHECK memoria_mib=6440 contenedores=31 health_http=200
+2026-10-25T01:01:54Z CHECK memoria_mib=6444 contenedores=31 health_http=200
+2026-10-25T01:02:26Z CHECK memoria_mib=6423 contenedores=31 health_http=200
+2026-10-25T01:02:59Z CHECK memoria_mib=6435 contenedores=31 health_http=200
+2026-10-25T01:03:32Z CHECK memoria_mib=6452 contenedores=31 health_http=200
+2026-10-25T01:04:04Z CHECK memoria_mib=6428 contenedores=31 health_http=200
+2026-10-25T01:04:38Z CHECK memoria_mib=6395 contenedores=31 health_http=200
+2026-10-25T01:05:11Z CHECK memoria_mib=6276 contenedores=31 health_http=200
+2026-10-25T01:05:13Z TIEMPO_PROGRAMADO_CUMPLIDO
+2026-10-25T01:05:13Z FINALIZANDO con status=0
+2026-10-25T01:05:13Z SALUD_FINAL {"status":"ok","redis":"ok"}
+2026-10-25T01:05:13Z CONTENEDORES_FINAL 31

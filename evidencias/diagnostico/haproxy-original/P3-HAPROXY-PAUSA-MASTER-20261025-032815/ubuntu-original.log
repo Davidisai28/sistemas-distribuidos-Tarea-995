@@ -1,0 +1,77 @@
+PRUEBA=P3-HAPROXY-PAUSA-MASTER-12S
+INICIO_UTC=2026-10-25T03:28:15+00:00
+FALLO=pausa reversible del contenedor del HAProxy master; no mata el proceso
+ADVERTENCIA=nc comprueba puerto abierto; puede no detectar un proceso congelado
+MASTER_ESTADO_PRE=true false
+BACKUP_ESTADO_PRE=true
+HEALTH_HTTP_PRE=200
+===== VIP ANTES 2026-10-25T03:28:16+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+PAUSA_INICIO_UTC=2026-10-25T03:28:18+00:00
+distributed-three-tier-presentation-lb-master-1
+MONITOREO_VIP_DURANTE_PAUSA
+MUESTRA=1
+===== VIP PAUSADO_1 2026-10-25T03:28:18+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=2
+===== VIP PAUSADO_2 2026-10-25T03:28:21+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=3
+===== VIP PAUSADO_3 2026-10-25T03:28:23+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=4
+===== VIP PAUSADO_4 2026-10-25T03:28:25+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=5
+===== VIP PAUSADO_5 2026-10-25T03:28:27+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=6
+===== VIP PAUSADO_6 2026-10-25T03:28:29+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=7
+===== VIP PAUSADO_7 2026-10-25T03:28:31+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=8
+===== VIP PAUSADO_8 2026-10-25T03:28:33+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=9
+===== VIP PAUSADO_9 2026-10-25T03:28:36+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MUESTRA=10
+===== VIP PAUSADO_10 2026-10-25T03:28:38+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+PAUSA_FIN_UTC=2026-10-25T03:28:40+00:00
+distributed-three-tier-presentation-lb-master-1
+RECUPERACION_MONITOR_6S
+===== VIP POST_1 2026-10-25T03:28:41+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+===== VIP POST_2 2026-10-25T03:28:43+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+===== VIP POST_3 2026-10-25T03:28:45+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+===== VIP POST_4 2026-10-25T03:28:48+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+===== VIP POST_5 2026-10-25T03:28:50+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+===== VIP POST_6 2026-10-25T03:28:52+00:00 =====
+VIP_OWNER=distributed-three-tier-presentation-keepalived-master-1
+VIP_NOT_PRESENT=distributed-three-tier-presentation-keepalived-backup-1
+MASTER_ESTADO_POST=true false
+HEALTH_HTTP_POST=200
+FIN_UTC=2026-10-25T03:28:55+00:00

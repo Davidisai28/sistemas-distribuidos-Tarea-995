@@ -1,0 +1,4 @@
+fase	concurrencia	completas	fallidas	no2xx	rps	p50_ms	p95_ms	p99_ms	exit	memavail_fin_mib
+BASE5	5	4516	0	0	376.31	12	23	31	0	6451
+SPIKE300	300	10456	0	0	871.18	327	525	621	0	6145
+RECOVERY5	5	3909	0	0	325.74	13	25	37	0	6290

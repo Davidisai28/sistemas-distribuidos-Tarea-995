@@ -1,0 +1,5 @@
+inicio=2026-10-24T23:40:19+00:00
+objetivo=http://127.0.0.1/api/products/cheapest
+concurrencia=5,25,50,100,150,200,300
+restricciones=MemAvailable>=1500MiB; max90seg/etapa; timeout5s; stop si errores o p95>500ms
+nproc=4

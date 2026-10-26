@@ -1,0 +1,22 @@
+P3-MONGODB-FAILOVER-01 — transcripción resumida fiel de la salida Ubuntu PEGADA por el usuario (NO es archivo de log producido directamente por Ubuntu).
+Fecha: 2026-10-24, Ubuntu UTC.
+PRECHECK: mongodb:27017=PRIMARY; mongodb2:27017=SECONDARY; mongodb-arbiter:27017=ARBITER; REVIEWS=2
+===== DETENIENDO PRIMARY =====
+2026-10-24T15:57:50+00:00
+distributed-three-tier-mongodb-1
+===== ESPERANDO ELECCION =====
+mongodb:27017=(not reachable/healthy)
+mongodb2:27017=PRIMARY
+mongodb-arbiter:27017=ARBITER
+REVIEWS=2
+NUEVO PRIMARY: mongodb2
+===== RESTAURANDO MONGODB ORIGINAL =====
+distributed-three-tier-mongodb-1
+2026-10-24T15:58:18+00:00
+===== ESTADO FINAL =====
+mongodb:27017=SECONDARY
+mongodb2:27017=PRIMARY
+mongodb-arbiter:27017=ARBITER
+REVIEWS=2
+REVIEWS ANTES=2 DESPUES=2
+RESULTADO: REPLICA SET RECUPERADO

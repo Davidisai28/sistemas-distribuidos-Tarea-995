@@ -1,0 +1,27 @@
+PRUEBA=P3-HA-PRESENTACION-PAUSA-HAProxy-MASTER-RETEST-HTTP
+INICIO_UTC=2026-10-25T05:00:58+00:00
+FALLO=pausa reversible unicamente HAProxy presentation master, 18 s objetivo
+WATCHDOG=despausa de emergencia a los 27 s desde activacion watchdog
+MONITOR_EXTERNO=EmirUc declarado activo por usuario; su archivo se audita aparte
+RUNNING_UNPAUSED=distributed-three-tier-presentation-lb-master-1
+RUNNING_UNPAUSED=distributed-three-tier-presentation-lb-backup-1
+RUNNING_UNPAUSED=distributed-three-tier-presentation-keepalived-master-1
+RUNNING_UNPAUSED=distributed-three-tier-presentation-keepalived-backup-1
+HTTP_CHECK_OK=distributed-three-tier-presentation-keepalived-master-1
+HTTP_CHECK_OK=distributed-three-tier-presentation-keepalived-backup-1
+PRE_VIP_MASTER=1 PRE_VIP_BACKUP=0 HTTP_PUBLICO=200
+PAUSA_SOLICITADA_UTC=2026-10-25T05:01:00+00:00
+distributed-three-tier-presentation-lb-master-1
+PAUSA_CONFIRMADA_UTC=2026-10-25T05:01:01+00:00 PAUSED=true
+UNPAUSE_SOLICITADO_UTC=2026-10-25T05:01:19+00:00
+distributed-three-tier-presentation-lb-master-1
+UNPAUSE_CONFIRMADO_UTC=2026-10-25T05:01:19+00:00 PAUSED=false
+VIP_DURANTE_O_DESPUES_BACKUP_OBSERVADO=SI
+VIP_DURANTE_O_DESPUES_MASTER_SIN_VIP_OBSERVADO=SI
+POST_VIP_MASTER=1 POST_VIP_BACKUP=0 HTTP_PUBLICO=200
+ESTADO=RECUPERADO_CON_FAILOVER_VIP_OBSERVADO_HTTP_CLIENTE_PENDIENTE
+INTERPRETACION=No aprobar continuidad cliente hasta auditar TXT original EmirUc
+FINALIZADOR_INICIO=2026-10-25T05:01:32+00:00 RC_PRE=0
+FINAL_STATE_MASTER=true false
+FINAL_OWNERS_MASTER=1 BACKUP=0
+FINAL_HTTP_PUBLICO=200
