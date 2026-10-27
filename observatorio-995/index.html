@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#141518"/>
+  <title>Observatorio 995 | Centro de operaciones</title>
+  <link href="/static/style.css" rel="stylesheet"/>
+  <link href="/static/premium.css" rel="stylesheet"/>
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon">◎</span><span><b>OBSERVATORIO <span class="brand-995">995</span></b><small>INFRAESTRUCTURA · EN VIVO</small></span></div>
+      <div class="nav-label">CENTRO DE OPERACIONES</div>
+      <a class="nav active" href="#topologia"><span>▦</span> Topología en vivo <span class="tiny">01</span></a>
+      <a class="nav" href="#telemetria"><span>⌁</span> Telemetría <span class="tiny">02</span></a>
+      <a class="nav" href="#eventos"><span>◷</span> Eventos <span class="tiny">03</span></a>
+      <div class="sidebar-bottom"><div class="shield">◇ &nbsp; SOLO LECTURA</div><p>Este panel consulta Docker y servicios. No puede detener ni reiniciar componentes.</p><p>Actualización automática cada 4 s.</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="crumb">INFRAESTRUCTURA <span>/</span> <strong>MONITOREO EN TIEMPO REAL</strong></div><div class="topright"><span id="clock">--:--:--</span><button type="button" id="themeToggle" class="theme-button" title="Cambiar aspecto" aria-label="Cambiar aspecto">☾</button><span class="live"><i></i> EN VIVO</span></div></header>
+      <div class="content">
+        <div class="intro"><div><div class="eyebrow"><span class="dot teal"></span> CENTRO DE OPERACIONES / VISIÓN GENERAL</div><h1>Arquitectura <em>en vivo.</em></h1><p>Observa cómo responden las tres capas, sus servicios y el flujo de solicitudes durante los experimentos de resiliencia.</p></div><div class="revision">INSTANCIA <b>VM · UBUNTU</b><small id="updated">Iniciando telemetría…</small></div></div>
+        <section class="kpis" aria-label="Estado general">
+          <div class="kpi"><div class="kpi-head">SERVICIOS ACTIVOS <span class="glyph">⬡</span></div><div class="kpi-value"><strong id="activeCount">—</strong><span id="activeTotal">/ 31</span></div><div class="kpi-desc" id="activeDesc">Esperando Docker…</div></div>
+          <div class="kpi"><div class="kpi-head">SALUD DE LA API <span class="glyph">✚</span></div><div class="kpi-value"><strong id="apiValue">—</strong><span class="mini-unit" id="apiCode"></span></div><div class="kpi-desc" id="apiDesc">Sin lectura todavía</div></div>
+          <div class="kpi"><div class="kpi-head">PRIMARIO REDIS <span class="glyph">◉</span></div><div class="kpi-value smaller"><strong id="redisValue">—</strong></div><div class="kpi-desc" id="redisDesc">Consultando Sentinel…</div></div>
+          <div class="kpi"><div class="kpi-head">LATENCIA HTTP <span class="glyph">↗</span></div><div class="kpi-value"><strong id="latencyValue">—</strong><span class="mini-unit">ms</span></div><div class="kpi-desc" id="latencyDesc">Sondeo GET del catálogo</div></div>
+        </section>
+        <section class="board-section" id="topologia">
+          <div class="section-head"><div><div class="eyebrow">VISTA DE SERVICIOS</div><h2>Topología operativa</h2></div><div class="legend"><span><i class="lg ok"></i> Activo</span><span><i class="lg bad"></i> Detenido</span><span><i class="lg idle"></i> Desconocido</span></div></div>
+          <div class="board-note board-note-controls"><div><span class="pulsing-dot"></span> Las conexiones animadas reconstruyen la última traza HTTP. No representan paquetes capturados. Los nodos atenuados <b>continúan activos</b> si conservan su indicador verde.</div><div class="topology-actions"><button type="button" id="mapMotionToggle" class="subtle-btn" aria-pressed="false">Pausar conexiones</button><button type="button" id="onlyRoute" class="subtle-btn" aria-pressed="false">Resaltar ruta</button></div></div>
+          <div class="board" id="topologyBoard">
+            <svg class="links" id="links" aria-hidden="true"></svg>
+            <article class="tier" id="tier-presentation"><div class="tier-head"><span class="tier-ordinal">01</span><div><div class="tier-overline">CAPA EXTERNA</div><h3>Presentación</h3></div><span class="tier-state" id="tierStatus-presentation">—</span></div><div class="tier-tagline">Punto de entrada · Balanceo · Nginx</div><div class="group-title">ENTRADA Y BALANCEADORES</div><div class="nodes" id="presentation-routers"></div><div class="group-title">SERVIDORES WEB</div><div class="nodes" id="presentation-workers"></div></article>
+            <article class="tier" id="tier-application"><div class="tier-head"><span class="tier-ordinal">02</span><div><div class="tier-overline">LÓGICA DE NEGOCIO</div><h3>Aplicación</h3></div><span class="tier-state" id="tierStatus-application">—</span></div><div class="tier-tagline">HAProxy · VRRP · APIs Node.js</div><div class="group-title">BALANCEO Y ALTA DISPONIBILIDAD</div><div class="nodes" id="application-routers"></div><div class="group-title">NODOS DE APLICACIÓN</div><div class="nodes" id="application-workers"></div></article>
+            <article class="tier" id="tier-data"><div class="tier-head"><span class="tier-ordinal">03</span><div><div class="tier-overline">PERSISTENCIA Y CACHÉ</div><h3>Datos</h3></div><span class="tier-state" id="tierStatus-data">—</span></div><div class="tier-tagline">MariaDB Galera · MongoDB · Redis</div><div class="group-title">GALERA · PROXIES Y CLÚSTER</div><div class="nodes" id="data-galera"></div><div class="group-title">MONGODB · CONJUNTO RÉPLICA <span class="logical-target-label" id="logical-mongo" title="La traza identifica MongoDB como servicio lógico, no el servidor físico">DESTINO LÓGICO</span></div><div class="nodes" id="data-mongo"></div><div class="group-title">REDIS · SENTINEL <span class="logical-target-label" id="logical-redis" title="La traza no identifica qué nodo físico Redis atendió la consulta">DESTINO LÓGICO</span></div><div class="nodes" id="data-redis"></div></article>
+          </div>
+          <div class="support"><div class="support-name">SERVICIOS AUXILIARES</div><div class="support-items" id="supportNodes"></div><div class="support-info">El inicializador puede aparecer como completado (Exit 0).</div></div>
+        </section>
+        <section class="panel journey" id="recorrido" aria-label="Visualización de la última solicitud observada">
+          <div class="panel-head"><div><div class="eyebrow">RECORRIDO OBSERVADO · X-REQUEST-TRACE</div><h2>Así viajó la última solicitud</h2></div><div class="journey-controls"><span class="chip" id="journeyCode">ESPERANDO</span><button type="button" id="motionToggle" class="subtle-btn" aria-pressed="false">Pausar animación</button></div></div>
+          <div class="journey-lane" id="journeyHops"><span class="empty">Aguardando una solicitud real del catálogo…</span></div>
+          <div class="journey-foot"><span id="journeyMeta">Observación de ruta en tiempo real.</span><span>Animación de la traza HTTP reportada, <b>no captura de paquetes TCP</b>.</span></div>
+        </section>
+        <section class="second-row" id="telemetria"><div class="panel trace-panel"><div class="panel-head"><div><div class="eyebrow">SOLICITUD REAL · HTTP</div><h2>Última traza de extremo a extremo</h2></div><span id="traceCode" class="chip">EN ESPERA</span></div><div class="trace-chips" id="traceChips"><span class="empty">Aguardando una solicitud del catálogo…</span></div><div class="trace-foot" id="traceTime">Consulta ligera cada 4 segundos. La ruta depende de caché y balanceadores.</div></div><div class="panel graph-panel"><div class="panel-head"><div><div class="eyebrow">HISTORIAL · SONDEO</div><h2>Tiempo de respuesta</h2></div><span class="chip">CATÁLOGO</span></div><div class="plot" id="plot"><svg id="spark" viewBox="0 0 480 144" preserveAspectRatio="none" role="img" aria-label="Latencia de solicitudes HTTP"></svg></div><div class="trace-foot">Latencia de nuestras solicitudes de prueba; no es rendimiento bajo carga.</div></div></section>
+        <section class="panel events-panel" id="eventos"><div class="panel-head"><div><div class="eyebrow">REGISTRO DE OBSERVACIONES</div><h2>Línea de tiempo</h2></div><span class="chip" id="eventsCount">0 EVENTOS</span></div><div class="recovery" id="recoveryInfo">El tiempo de recuperación se calculará cuando observemos una caída y posterior reaparición del mismo contenedor. Es una aproximación basada en sondeos cada 4 s.</div><div class="event-list" id="eventList"><div class="empty">Aguardando cambios de estado…</div></div></section>
+        <footer>OBSERVATORIO 995 · v0.3 <span>●</span> Prototipo de observabilidad de solo lectura · Los cambios de rol y los fallos deben validarse mediante evidencias.</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

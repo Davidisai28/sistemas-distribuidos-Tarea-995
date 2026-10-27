@@ -7,7 +7,8 @@ flowchart TB
     subgraph AUX["Monitoreo y herramientas auxiliares"]
         direction TB
         nagios["Nagios<br/>:8088<br/>27 comprobaciones HTTP/TCP"]
-        observ["monitor-995<br/>:7800<br/>Observatorio 995"]
+        dockgraph["monitor-995<br/>:7800<br/>DockGraph (topología Docker)"]
+        observ["Observatorio 995<br/>:7812 (Python/SSH)<br/>Panel de tres capas"]
         cataloginit["catalog-init<br/>Inicializador<br/>Exited (0)"]
     end
 
@@ -125,8 +126,8 @@ flowchart TB
 
             rs0["Replica Set rs0<br/>Roles dinámicos"]
 
-            m1[("mongodb<br/>PRIMARY observado")]
-            m2[("mongodb2<br/>SECONDARY observado")]
+            m1[("mongodb<br/>PRIMARY observado<br/>(rol dinámico)")]
+            m2[("mongodb2<br/>SECONDARY observado<br/>(rol dinámico)")]
             m3["mongodb-arbiter<br/>ARBITER · sin copia de datos"]
 
             rs0 -. "Miembro de datos" .-> m1
@@ -140,10 +141,10 @@ flowchart TB
         subgraph REDIS["Redis / Caché"]
             direction TB
 
-            rha["Redis HA + Sentinel<br/>Agrupación lógica"]
+            rha["Redis HA + Sentinel<br/>Agrupación lógica<br/>Roles dinámicos"]
 
-            r1[("redis<br/>MASTER observado")]
-            r2[("redis-replica<br/>REPLICA observada")]
+            r1[("redis<br/>MASTER observado<br/>(rol dinámico)")]
+            r2[("redis-replica<br/>REPLICA observada<br/>(rol dinámico)")]
 
             s1["redis-sentinel-1"]
             s2["redis-sentinel-2"]
@@ -218,6 +219,10 @@ flowchart TB
     nagios -. "Sondeos HTTP / TCP" .-> P
     nagios -. "Sondeos HTTP / TCP" .-> A
     nagios -. "Sondeos HTTP / TCP" .-> D
+
+    dockgraph -. "Topología Docker (redes)" .-> P
+    dockgraph -. "Topología Docker (redes)" .-> A
+    dockgraph -. "Topología Docker (redes)" .-> D
 
     observ -. "Estados / topología" .-> P
     observ -. "Estados / trazas" .-> A

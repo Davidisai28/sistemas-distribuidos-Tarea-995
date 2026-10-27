@@ -27,7 +27,8 @@ flowchart TB
     subgraph AUX["Monitoreo y herramientas auxiliares"]
         direction TB
         nagios["Nagios<br/>:8088<br/>27 comprobaciones HTTP/TCP"]
-        observ["monitor-995<br/>:7800<br/>Observatorio 995"]
+        dockgraph["monitor-995<br/>:7800<br/>DockGraph (topología Docker)"]
+        observ["Observatorio 995<br/>:7812 (Python/SSH)<br/>Panel de tres capas"]
         cataloginit["catalog-init<br/>Inicializador<br/>Exited (0)"]
     end
 
@@ -145,8 +146,8 @@ flowchart TB
 
             rs0["Replica Set rs0<br/>Roles dinámicos"]
 
-            m1[("mongodb<br/>PRIMARY observado")]
-            m2[("mongodb2<br/>SECONDARY observado")]
+            m1[("mongodb<br/>PRIMARY observado<br/>(rol dinámico)")]
+            m2[("mongodb2<br/>SECONDARY observado<br/>(rol dinámico)")]
             m3["mongodb-arbiter<br/>ARBITER · sin copia de datos"]
 
             rs0 -. "Miembro de datos" .-> m1
@@ -160,10 +161,10 @@ flowchart TB
         subgraph REDIS["Redis / Caché"]
             direction TB
 
-            rha["Redis HA + Sentinel<br/>Agrupación lógica"]
+            rha["Redis HA + Sentinel<br/>Agrupación lógica<br/>Roles dinámicos"]
 
-            r1[("redis<br/>MASTER observado")]
-            r2[("redis-replica<br/>REPLICA observada")]
+            r1[("redis<br/>MASTER observado<br/>(rol dinámico)")]
+            r2[("redis-replica<br/>REPLICA observada<br/>(rol dinámico)")]
 
             s1["redis-sentinel-1"]
             s2["redis-sentinel-2"]
@@ -239,6 +240,10 @@ flowchart TB
     nagios -. "Sondeos HTTP / TCP" .-> A
     nagios -. "Sondeos HTTP / TCP" .-> D
 
+    dockgraph -. "Topología Docker (redes)" .-> P
+    dockgraph -. "Topología Docker (redes)" .-> A
+    dockgraph -. "Topología Docker (redes)" .-> D
+
     observ -. "Estados / topología" .-> P
     observ -. "Estados / trazas" .-> A
     observ -. "Estados / topología" .-> D
@@ -278,7 +283,7 @@ El catálogo obtiene de MariaDB los productos de menor precio y puede almacenar 
 
 ## Observatorio 995
 
-El **Observatorio 995** (`monitor-995`, puerto `7800`) muestra las tres capas, la distribución de servicios y el recorrido lógico de las solicitudes, lo que facilita el seguimiento durante los experimentos de resiliencia. Se complementa con las comprobaciones de disponibilidad de Nagios.
+El **Observatorio 995** (código fuente en [`observatorio-995/`](observatorio-995/), ejecutado con `python3 app.py --port 7812` y accesible vía túnel SSH en el puerto `17812`) muestra las tres capas, la distribución de servicios y el recorrido lógico de las solicitudes (`X-Request-Trace`), lo que facilita el seguimiento durante los experimentos de resiliencia. Se complementa con las comprobaciones de disponibilidad de Nagios y la vista de DockGraph.
 
 <a href="docs/observatorio-995.png"><img src="docs/observatorio-995.png" alt="Interfaz del Observatorio 995 con las capas de presentación, aplicación y datos" width="680"></a>
 
@@ -300,7 +305,7 @@ En la captura del **26 de octubre de 2026**, las **27 comprobaciones aparecen en
 
 ### DockGraph
 
-Utilizamos **DockGraph** como herramienta auxiliar de visualización de la topología de Docker. Su representación gráfica permite examinar los contenedores y sus conexiones de red, lo que facilita identificar cómo se relacionan los componentes desplegados.
+Utilizamos **DockGraph** (desplegado en el contenedor `monitor-995`, puerto `7800`) como herramienta auxiliar de visualización de la topología de Docker. Su representación gráfica permite examinar los contenedores y sus conexiones de red, lo que facilita identificar cómo se relacionan los componentes desplegados.
 
 <a href="docs/dockgraph-topologia.png"><img src="docs/dockgraph-topologia.png" alt="Captura de DockGraph con los contenedores y relaciones de red del proyecto" width="900"></a>
 
